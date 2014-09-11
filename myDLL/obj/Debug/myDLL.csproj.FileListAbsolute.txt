@@ -40,3 +40,11 @@ D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.NetworkAnaly
 D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.Geoprocessing.xml
 D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.DataSourcesNetCDF.xml
 D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.GeoAnalyst.xml
+D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\obj\Debug\myDLL.csprojResolveAssemblyReference.cache
+D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.CatalogUI.dll
+D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.Catalog.dll
+D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.Framework.dll
+D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.Search.dll
+D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.CatalogUI.xml
+D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.Catalog.xml
+D:\MyProgram\GitHub\OverlayAnalysisTest\myDLL\bin\Debug\ESRI.ArcGIS.Framework.xml

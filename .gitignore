@@ -34,3 +34,14 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+*.dll
+*.dll
+*.dll
+*.xml
+*.pdb
+*.pdb
+*.pdb
+OverlayAnalysisTest/obj/x86/Debug/OverlayAnalysisTest.pdb
+OverlayAnalysisTest/obj/x86/Debug/OverlayAnalysisTest.pdb
+*.dll

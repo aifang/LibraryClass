@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.esriSystem;
+using ESRI.ArcGIS.Geometry;
 using ESRI.ArcGIS.Geodatabase;
 
 namespace myDLL
@@ -34,36 +35,80 @@ namespace myDLL
             return featureLayer;
         }
 
+        //获取workspace中所有的图层
         public static List<IFeatureLayer> getFeatureLayersFromWorkspace(IWorkspace pWorkspace)
         {
-            List<IFeatureLayer> piontLayer=new List<IFeatureLayer>();
+            List<IFeatureLayer> pointLayer=new List<IFeatureLayer>();
             List<IFeatureLayer> lineLayer = new List<IFeatureLayer>();
             List<IFeatureLayer> polygonLayer = new List<IFeatureLayer>();
             List<IFeatureLayer> sortLayer = new List<IFeatureLayer>();
+            //sortLayer.Sort()
 
             if (pWorkspace != null)
             {
-                IEnumDataset enumDataset = pWorkspace.get_Datasets(esriDatasetType.esriDTFeatureDataset);
+                IEnumDataset enumDataset = pWorkspace.get_Datasets(esriDatasetType.esriDTAny);
                 enumDataset.Reset();
                 IDataset dataset = enumDataset.Next();
                 while (dataset != null)
                 {
-                    IEnumDataset _subset = dataset.Subsets;
-                    _subset.Reset();
-                    IDataset pSubset = _subset.Next();
-                    while (pSubset != null)
+                    if (dataset.Type == esriDatasetType.esriDTFeatureDataset)
                     {
-                        IFeatureClass _fc = (IFeatureClass)pSubset;                        
+                        IEnumDataset _subset = dataset.Subsets;
+                        _subset.Reset();
+                        IDataset pSubset = _subset.Next();
+                        while (pSubset != null)
+                        {
+                            IFeatureClass _fc = (IFeatureClass)pSubset;
+                            IFeatureLayer _layer = new FeatureLayer();
+                            _layer.FeatureClass = _fc;
+                            //_layer.Name = dataset.Name;
+                            _layer.Name = _fc.AliasName;
+                            switch (_fc.ShapeType)
+                            {
+                                case esriGeometryType.esriGeometryPoint:
+                                    pointLayer.Add(_layer);
+                                    break;
+                                case esriGeometryType.esriGeometryPolyline:
+                                    lineLayer.Add(_layer);
+                                    break;
+                                case esriGeometryType.esriGeometryPolygon:
+                                    polygonLayer.Add(_layer);
+                                    break;
+                                default:
+                                    break;
+                            }
+                            pSubset = _subset.Next();
+                        }
+                    }
+                    else if (dataset.Type == esriDatasetType.esriDTFeatureClass)
+                    {
+                        IFeatureClass _fc = (IFeatureClass)dataset;
                         IFeatureLayer _layer = new FeatureLayer();
                         _layer.FeatureClass = _fc;
                         //_layer.Name = dataset.Name;
                         _layer.Name = _fc.AliasName;
-                        pSubset = _subset.Next();
+                        switch (_fc.ShapeType)
+                        {
+                            case esriGeometryType.esriGeometryPoint:
+                                pointLayer.Add(_layer);
+                                break;
+                            case esriGeometryType.esriGeometryPolyline:
+                                lineLayer.Add(_layer);
+                                break;
+                            case esriGeometryType.esriGeometryPolygon:
+                                polygonLayer.Add(_layer);
+                                break;
+                            default:
+                                break;
+                        }
                     }
                     dataset = enumDataset.Next();
                 }
             }
-            return null;
+            sortLayer.AddRange(polygonLayer);
+            sortLayer.AddRange(lineLayer);            
+            sortLayer.AddRange(pointLayer);
+            return sortLayer;
         }
 
         public static string GetClassOwnerName(string dsName)

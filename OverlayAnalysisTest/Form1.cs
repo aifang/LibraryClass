@@ -28,60 +28,30 @@ namespace OverlayAnalysisTest
         private void Form1_Load(object sender, EventArgs e)
         {
             OpenMdb(axMapControl1);
-            DoOverLay();
-            FrmGridView frmGridView = new FrmGridView();
-            frmGridView.Table = outTable;
-            frmGridView.Show();
+            //DoOverLay();
+            //FrmGridView frmGridView = new FrmGridView();
+            //frmGridView.Table = outTable;
+            //frmGridView.Show();
+            myDLL.SpatialReferenceHelper.ChangeMapSpatialReference(0, axMapControl1.Map);
         }
         //打开MDB数据
         public void OpenMdb(AxMapControl axMapControl)
         {
-            IWorkspaceFactory pWorkspaceFactory = new AccessWorkspaceFactoryClass();           
-            IWorkspace pWorkspace = pWorkspaceFactory.OpenFromFile(@"D:\鲅鱼圈区\鲅鱼圈区.mdb", 0);
-            IFeatureWorkspace pFeatureWorkspace = pWorkspace as IFeatureWorkspace;
+            string connectStr=@"D:\鲅鱼圈区\鲅鱼圈区.mdb";
+            IWorkspace pWorkspace = myDLL.WorkspaceHelper.GetAccessWorkspace(connectStr);
             if (pWorkspace != null)
             {
-                //递归试试，遍历所有
-                axMapControl.ClearLayers();
-                IEnumDataset enumDataset = pWorkspace.get_Datasets(esriDatasetType.esriDTFeatureDataset);
-                enumDataset.Reset();
-                IDataset dataset = enumDataset.Next();
-                while (dataset != null)
+                List<IFeatureLayer> pLayers = (myDLL.LayerHelper.getFeatureLayersFromWorkspace(pWorkspace));
+                if (pLayers.Count != 0)
                 {
-                    IEnumDataset _subset = dataset.Subsets;
-                    _subset.Reset();
-                    IDataset pSubset = _subset.Next();
-                    while (pSubset != null)
-                    {
-                        IFeatureClass _fc = (IFeatureClass)pSubset;
-                       // string str = myDLL.FeatureClassHelper.getWorkspaceFactoryName(_fc);
-                        IFeatureLayer _layer = new FeatureLayer();
-                        _layer.FeatureClass = _fc;
-                        //_layer.Name = dataset.Name;
-                        _layer.Name = _fc.AliasName;
-                        axMapControl.AddLayer(_layer);
-                        pSubset = _subset.Next();
-                    }
-                    dataset = enumDataset.Next();
+                    foreach (IFeatureLayer item in pLayers)
+                        axMapControl1.AddLayer(item);
                 }
-            }
-
+            }  
         }
 
         private void DoOverLay()
         {
-            //IWorkspaceFactory pWorkspaceFactory = new AccessWorkspaceFactoryClass();           
-            //IWorkspace pWorkspace = pWorkspaceFactory.OpenFromFile(@"D:\鲅鱼圈区\鲅鱼圈区.mdb", 0);
-            //IFeatureWorkspace pFeatureWorkspace = pWorkspace as IFeatureWorkspace;
-
-            //IFeatureLayer pFtLayer = new FeatureLayer();
-            //IFeatureLayer inputlayer1=new FeatureLayer();
-            //inputlayer1.FeatureClass=pFeatureWorkspace.OpenFeatureClass("MZZDJSXM");
-            //IFeatureLayer inputlayer2=new FeatureLayer();
-            //inputlayer2.FeatureClass=pFeatureWorkspace.OpenFeatureClass("XZQ");
-            //pFtLayer.FeatureClass = OverlayAnalysis.OverlayAnalysis.OverLayersis(inputlayer1, inputlayer2, out outTable);
-            //pFtLayer.Name = "Intersect_result";
-            //axMapControl1.AddLayer(pFtLayer);
             outTable = OverlayAnalysis.OverlayAnalysis.OverLayersis("面状重点建设项目", "行政区", axMapControl1);
         }
         
