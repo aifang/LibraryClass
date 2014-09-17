@@ -27,18 +27,31 @@ namespace OverlayAnalysisTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            #region 重叠分析测试 and getworkspace测试
             OpenMdb(axMapControl1);
             //DoOverLay();
             //FrmGridView frmGridView = new FrmGridView();
             //frmGridView.Table = outTable;
             //frmGridView.Show();
-            myDLL.SpatialReferenceHelper.ChangeMapSpatialReference(0, axMapControl1.Map);
+            //myDLL.SpatialReferenceHelper.ChangeMapSpatialReference(0, axMapControl1.Map);
+            #endregion
+
+            #region 创建workspace测试
+            //string filepath = @"D:\test";
+            //string filename = "test";
+            
+            //myDLL.WorkspaceHelper.CreateAccessWorkspace(filepath, filename);
+            //myDLL.WorkspaceHelper.CreateFileGDBWorkspace(filepath, filename);
+            //myDLL.WorkspaceHelper.CreateShapefileWorkspace(filepath, filename);
+            #endregion
+
         }
         //打开MDB数据
         public void OpenMdb(AxMapControl axMapControl)
         {
-            string connectStr=@"D:\鲅鱼圈区\鲅鱼圈区.mdb";
+            string connectStr = @"D:\鲅鱼圈区\鲅鱼圈区.mdb";
             IWorkspace pWorkspace = myDLL.WorkspaceHelper.GetAccessWorkspace(connectStr);
+            //IWorkspace pWorkspace = myDLL.WorkspaceHelper.GetSDEWorkspace("localhost", "5151", "sde", "sde", "", "SDE.DEFAULT");
             if (pWorkspace != null)
             {
                 List<IFeatureLayer> pLayers = (myDLL.LayerHelper.getFeatureLayersFromWorkspace(pWorkspace));
