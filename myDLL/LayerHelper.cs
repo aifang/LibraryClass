@@ -36,12 +36,12 @@ namespace myDLL
         }
 
         //获取workspace中所有的图层
-        public static List<IFeatureLayer> getFeatureLayersFromWorkspace(IWorkspace pWorkspace)
+        public static IList<IFeatureLayer> getFeatureLayersFromWorkspace(IWorkspace pWorkspace)
         {
-            List<IFeatureLayer> pointLayer=new List<IFeatureLayer>();
-            List<IFeatureLayer> lineLayer = new List<IFeatureLayer>();
-            List<IFeatureLayer> polygonLayer = new List<IFeatureLayer>();
-            List<IFeatureLayer> sortLayer = new List<IFeatureLayer>();
+            IList<IFeatureLayer> pointLayer = new List<IFeatureLayer>();
+            IList<IFeatureLayer> lineLayer = new List<IFeatureLayer>();
+            IList<IFeatureLayer> polygonLayer = new List<IFeatureLayer>();
+            IList<IFeatureLayer> sortLayer = new List<IFeatureLayer>();
             //sortLayer.Sort()
 
             if (pWorkspace != null)
@@ -105,9 +105,17 @@ namespace myDLL
                     dataset = enumDataset.Next();
                 }
             }
-            sortLayer.AddRange(polygonLayer);
-            sortLayer.AddRange(lineLayer);            
-            sortLayer.AddRange(pointLayer);
+            //sortLayer.AddRange(polygonLayer);
+            //sortLayer.AddRange(lineLayer);            
+            //sortLayer.AddRange(pointLayer);
+
+
+            foreach (var a in polygonLayer)
+                sortLayer.Add(a);
+            foreach (var a in lineLayer)
+                sortLayer.Add(a);
+            foreach (var a in pointLayer)
+                sortLayer.Add(a);
             return sortLayer;
         }
 

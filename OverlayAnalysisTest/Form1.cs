@@ -54,7 +54,7 @@ namespace OverlayAnalysisTest
             //IWorkspace pWorkspace = myDLL.WorkspaceHelper.GetSDEWorkspace("localhost", "5151", "sde", "sde", "", "SDE.DEFAULT");
             if (pWorkspace != null)
             {
-                List<IFeatureLayer> pLayers = (myDLL.LayerHelper.getFeatureLayersFromWorkspace(pWorkspace));
+                IList<IFeatureLayer> pLayers = (myDLL.LayerHelper.getFeatureLayersFromWorkspace(pWorkspace));
                 if (pLayers.Count != 0)
                 {
                     foreach (IFeatureLayer item in pLayers)

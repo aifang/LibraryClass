@@ -78,5 +78,37 @@ namespace myDLL
             }
         }
         #endregion
+
+        #region   点选功能
+        public ESRI.ArcGIS.Geodatabase.IFeatureCursor GetAllFeaturesFromPointSearchInGeoFeatureLayer(System.Double searchTolerance, ESRI.ArcGIS.Geometry.IPoint point, ESRI.ArcGIS.Carto.IGeoFeatureLayer geoFeatureLayer, ESRI.ArcGIS.Carto.IActiveView activeView)
+        {
+
+            if (searchTolerance < 0 || point == null || geoFeatureLayer == null || activeView == null)
+            {
+                return null;
+            }
+            ESRI.ArcGIS.Carto.IMap map = activeView.FocusMap;
+
+            // Expand the points envelope to give better search results    
+            ESRI.ArcGIS.Geometry.IEnvelope envelope = point.Envelope;
+            envelope.Expand(searchTolerance, searchTolerance, false);   //dx,dy
+
+            ESRI.ArcGIS.Geodatabase.IFeatureClass featureClass = geoFeatureLayer.FeatureClass;
+            System.String shapeFieldName = featureClass.ShapeFieldName;
+
+            // Create a new spatial filter and use the new envelope as the geometry    
+            ESRI.ArcGIS.Geodatabase.ISpatialFilter spatialFilter = new ESRI.ArcGIS.Geodatabase.SpatialFilterClass();
+            spatialFilter.Geometry = envelope;
+            spatialFilter.SpatialRel = ESRI.ArcGIS.Geodatabase.esriSpatialRelEnum.esriSpatialRelEnvelopeIntersects;
+            spatialFilter.set_OutputSpatialReference(shapeFieldName, map.SpatialReference);
+            spatialFilter.GeometryField = shapeFieldName;
+
+            // Do the search
+            ESRI.ArcGIS.Geodatabase.IFeatureCursor featureCursor = featureClass.Search(spatialFilter, false);
+
+            return featureCursor;
+        }
+        #endregion
+
     }
 }

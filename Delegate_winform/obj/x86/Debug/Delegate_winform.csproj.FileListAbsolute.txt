@@ -1,0 +1,9 @@
+D:\MyProgram\GitHub\OverlayAnalysisTest\Delegate_winform\bin\Debug\Delegate_winform.exe
+D:\MyProgram\GitHub\OverlayAnalysisTest\Delegate_winform\bin\Debug\Delegate_winform.pdb
+D:\MyProgram\GitHub\OverlayAnalysisTest\Delegate_winform\obj\x86\Debug\Delegate_winform.Component.button.resources
+D:\MyProgram\GitHub\OverlayAnalysisTest\Delegate_winform\obj\x86\Debug\Delegate_winform.Form1.resources
+D:\MyProgram\GitHub\OverlayAnalysisTest\Delegate_winform\obj\x86\Debug\Delegate_winform.Properties.Resources.resources
+D:\MyProgram\GitHub\OverlayAnalysisTest\Delegate_winform\obj\x86\Debug\Delegate_winform.csproj.GenerateResource.Cache
+D:\MyProgram\GitHub\OverlayAnalysisTest\Delegate_winform\obj\x86\Debug\Delegate_winform.exe
+D:\MyProgram\GitHub\OverlayAnalysisTest\Delegate_winform\obj\x86\Debug\Delegate_winform.pdb
+D:\MyProgram\GitHub\OverlayAnalysisTest\Delegate_winform\obj\x86\Debug\Delegate_winform.csprojResolveAssemblyReference.cache
