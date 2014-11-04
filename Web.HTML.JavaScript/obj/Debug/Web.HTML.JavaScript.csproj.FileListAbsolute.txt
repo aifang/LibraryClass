@@ -2,3 +2,5 @@ D:\MyProgram\GitHub\OverlayAnalysisTest\Web.HTML.JavaScript\bin\Web.HTML.JavaScr
 D:\MyProgram\GitHub\OverlayAnalysisTest\Web.HTML.JavaScript\bin\Web.HTML.JavaScript.pdb
 D:\MyProgram\GitHub\OverlayAnalysisTest\Web.HTML.JavaScript\obj\Debug\Web.HTML.JavaScript.dll
 D:\MyProgram\GitHub\OverlayAnalysisTest\Web.HTML.JavaScript\obj\Debug\Web.HTML.JavaScript.pdb
+D:\MyProgram\GitHub\OverlayAnalysisTest\Web.HTML.JavaScript\obj\Debug\Web.HTML.JavaScript.csprojResolveAssemblyReference.cache
+D:\MyProgram\GitHub\OverlayAnalysisTest\Web.HTML.JavaScript\bin\Web.HTML.JavaScript.dll.config

@@ -94,7 +94,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoordinateToGeometries.cs" />
     <Compile Include="FeatureClassHelper.cs" />
+    <Compile Include="FeatureHelper.cs" />
     <Compile Include="LayerHelper.cs" />
     <Compile Include="SpatialReferenceHelper.cs" />
     <Compile Include="Temp.cs" />

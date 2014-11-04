@@ -1,4 +1,4 @@
-﻿<%@ Page Title="主页" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+﻿<%@ Page Title="第一个使用Linq的ASP.NET程序" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
     CodeBehind="Default.aspx.cs" Inherits="Web.HTML.JavaScript._Default" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">

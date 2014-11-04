@@ -81,6 +81,11 @@ namespace myDLL
                 return null;
             }
         }
+
+        /// <summary>
+        /// 输入.shp完整路径返回Workspace
+        /// </summary>
+        /// <param name="sFilePath">.shp所在完整路径</param>
         public static IWorkspace GetShapefileWorkspace(string sFilePath)
         {
             if (!File.Exists(sFilePath))

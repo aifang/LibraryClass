@@ -1,0 +1,5 @@
+D:\MyProgram\GitHub\OverlayAnalysisTest\sharpMaplibrary\bin\Debug\sharpMaplibrary.dll
+D:\MyProgram\GitHub\OverlayAnalysisTest\sharpMaplibrary\bin\Debug\sharpMaplibrary.pdb
+D:\MyProgram\GitHub\OverlayAnalysisTest\sharpMaplibrary\obj\Debug\sharpMaplibrary.csprojResolveAssemblyReference.cache
+D:\MyProgram\GitHub\OverlayAnalysisTest\sharpMaplibrary\obj\Debug\sharpMaplibrary.dll
+D:\MyProgram\GitHub\OverlayAnalysisTest\sharpMaplibrary\obj\Debug\sharpMaplibrary.pdb
