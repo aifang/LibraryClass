@@ -1,0 +1,5 @@
+D:\MyProgram\GitHub\OverlayAnalysisTest\WindowBasis\bin\Debug\WindowBasis.dll
+D:\MyProgram\GitHub\OverlayAnalysisTest\WindowBasis\bin\Debug\WindowBasis.pdb
+D:\MyProgram\GitHub\OverlayAnalysisTest\WindowBasis\obj\Debug\WindowBasis.csprojResolveAssemblyReference.cache
+D:\MyProgram\GitHub\OverlayAnalysisTest\WindowBasis\obj\Debug\WindowBasis.dll
+D:\MyProgram\GitHub\OverlayAnalysisTest\WindowBasis\obj\Debug\WindowBasis.pdb

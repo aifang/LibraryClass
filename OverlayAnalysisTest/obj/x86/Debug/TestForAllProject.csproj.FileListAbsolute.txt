@@ -11,3 +11,7 @@ D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\obj\x86\Debug\Overla
 D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\obj\x86\Debug\TestForAllProject.csproj.GenerateResource.Cache
 D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\obj\x86\Debug\OverlayAnalysisTest.exe
 D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\obj\x86\Debug\OverlayAnalysisTest.pdb
+D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\bin\Debug\FeatureClassCopy.dll
+D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\bin\Debug\FeatureClassCopy.pdb
+D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\bin\Debug\WindowBasis.dll
+D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\bin\Debug\WindowBasis.pdb

@@ -16,6 +16,8 @@ using ESRI.ArcGIS.Geometry;
 
 using OverlayAnalysis;
 using myDLL;
+using WindowBasis;
+using System.Diagnostics;
 
 namespace OverlayAnalysisTest
 {
@@ -52,7 +54,7 @@ namespace OverlayAnalysisTest
             #endregion
 
             #region 创建featureClass测试
-            OpenMdb(axMapControl1);
+            //OpenMdb(axMapControl1);
             #endregion
 
             #region 删除要素测试
@@ -62,6 +64,26 @@ namespace OverlayAnalysisTest
             #region 创建空间参考测试
             //ISpatialReference newSRID= SpatialReferenceHelper.createSpatialReference(4610, false, false);
             #endregion
+
+            #region 要素集拷贝复制
+            //List<string> _FClassNameSouList=new List<string>();
+            //_FClassNameSouList.Add("DZZDJSXM_X20030206G210100");
+            //_FClassNameSouList.Add("MZZDJSXM_X20030206G210100");
+            //_FClassNameSouList.Add("TDLYGNFQ_X20030206G210100");
+            //_FClassNameSouList.Add("TDZZZDQY_X20030206G210100");
+            //_FClassNameSouList.Add("XZZDJSXM_X20030206G210100");
+            //FeatureClassCopy.FeatureClassCopy.backupFeatureDataset("FeatureDatasetCopyTest", _FClassNameSouList,"");
+            //FeatureClassCopy.FeatureClassCopy.updateFeatureClass("FeatureDatasetCopyTest", _FClassNameSouList);
+            #endregion
+
+            #region XML方法测试
+            //XMLHelper.constructXML();
+            #endregion
+            #region
+            //UninstallService();
+            installService();
+            #endregion
+
 
         }
         //打开MDB数据
@@ -130,7 +152,31 @@ namespace OverlayAnalysisTest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            featureExportToShapefile();
+            //featureExportToShapefile();
+        }
+
+        private void installService()
+        {
+            string CurrentDirectory = System.Environment.CurrentDirectory;
+            System.Environment.CurrentDirectory = CurrentDirectory + "\\Service";
+            Process process = new Process();
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.FileName = "Install.bat";
+            process.StartInfo.CreateNoWindow = true;
+            process.Start();
+            System.Environment.CurrentDirectory = CurrentDirectory;
+        }
+
+        private void UninstallService()
+        {
+            string CurrentDirectory = System.Environment.CurrentDirectory;
+            System.Environment.CurrentDirectory = CurrentDirectory + "\\Service";
+            Process process = new Process();
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.FileName = "Uninstall.bat";
+            process.StartInfo.CreateNoWindow = true;
+            process.Start();
+            System.Environment.CurrentDirectory = CurrentDirectory;
         }
     }
 }

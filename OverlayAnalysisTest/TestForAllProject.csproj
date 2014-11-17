@@ -124,6 +124,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FeatureClassCopy\FeatureClassCopy.csproj">
+      <Project>{fbdc79b8-5a34-4dba-9adb-bc500d9245be}</Project>
+      <Name>FeatureClassCopy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\myDLL\myDLL.csproj">
       <Project>{C5ABEFF3-D87D-43E8-9A8C-A5452F88B89D}</Project>
       <Name>myDLL</Name>
@@ -131,6 +135,10 @@
     <ProjectReference Include="..\OverlayAnalysis\OverlayAnalysis.csproj">
       <Project>{A776A253-F4C9-4A1A-B714-5BB97FB2F061}</Project>
       <Name>OverlayAnalysis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WindowBasis\WindowBasis.csproj">
+      <Project>{0b5ac4e5-f6bb-4136-80f5-399de31cb9cb}</Project>
+      <Name>WindowBasis</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
