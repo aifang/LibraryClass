@@ -18,6 +18,9 @@ using OverlayAnalysis;
 using myDLL;
 using WindowBasis;
 using System.Diagnostics;
+using DAL;
+using System.Data.OleDb;
+using System.Data.OracleClient;
 
 namespace OverlayAnalysisTest
 {
@@ -32,7 +35,7 @@ namespace OverlayAnalysisTest
         private void Form1_Load(object sender, EventArgs e)
         {
             #region 重叠分析测试 and getworkspace测试
-            //OpenMdb(axMapControl1);
+            OpenMdb(axMapControl1);
             //DoOverLay();
             //FrmGridView frmGridView = new FrmGridView();
             //frmGridView.Table = outTable;
@@ -79,22 +82,30 @@ namespace OverlayAnalysisTest
             #region XML方法测试
             //XMLHelper.constructXML();
             #endregion
-            #region
+
+            #region 服务安装测试
             //UninstallService();
-            installService();
+            //installService();
             #endregion
 
+            #region orcale数据库连接测试
+            //OracleConnection Connection = DBHelper.Connection;
+            #endregion
+
+            #region 备份信息填充测试
+            
+            #endregion
 
         }
         //打开MDB数据
         public void OpenMdb(AxMapControl axMapControl)
         {
             string connectStr = @"D:\鲅鱼圈区\鲅鱼圈区.mdb";
-            IWorkspace pWorkspace = myDLL.WorkspaceHelper.GetAccessWorkspace(connectStr);
-            //IWorkspace pWorkspace = myDLL.WorkspaceHelper.GetSDEWorkspace("localhost", "5151", "sde", "sde", "", "SDE.DEFAULT");
+            //IWorkspace pWorkspace = myDLL.WorkspaceHelper.GetAccessWorkspace(connectStr);
+            IWorkspace pWorkspace = myDLL.WorkspaceHelper.GetSDEWorkspace("localhost", "5151", "HR", "sys", "", "SDE.DEFAULT");
             //string connectStr = @"C:\temp\XZQ.shp";
             //IWorkspace pWorkspace = myDLL.WorkspaceHelper.GetShapefileWorkspace(connectStr);
-            IFeatureClass pfClass = FeatureClassHelper.CreateFeatureClass(pWorkspace as IWorkspace2, null, "qqq", null, null, null, "", true,esriGeometryType.esriGeometryPolyline);
+            //IFeatureClass pfClass = FeatureClassHelper.CreateFeatureClass(pWorkspace as IWorkspace2, null, "qqq", null, null, null, "", true,esriGeometryType.esriGeometryPolyline);
             if (pWorkspace != null)
             {
                 IList<IFeatureLayer> pLayers = (myDLL.LayerHelper.getFeatureLayersFromWorkspace(pWorkspace));

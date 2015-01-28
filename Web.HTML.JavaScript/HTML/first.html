@@ -6,7 +6,7 @@
     <!-- [if ls IE9 ] -->
     <!--<script  src="http://apps.bdimg.comapps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>-->
     <!--[end if]-->
-    <script type="text/javascript" src="../Scripts/jquery-1.11.1.js" />
+    <script type="text/javascript" src="../Scripts/jquery-1.11.1.js" ></script>
 </head>
 <body>
     <h1>
@@ -72,6 +72,7 @@ line breaks
     <p>
         点击灯泡就可以打开或者关闭这盏灯</p>
     <!------------------------------------>
+    <hr color="#0033FF"/>
     <p>
         请输入数字，如果输入值不是数字，浏览器会弹出提示框</p>
     <script type="text/javascript">
@@ -83,6 +84,13 @@ line breaks
         }
     </script>
     <input id="txtIsNum" type="text" />
-    <button type="button" onclick="isNum()">数字验证</button>
+    <button type="button" onclick="isNum()">数字验证</button> <br/><br/>
+    <canvas id="myCanvas" width="300" height="200" title="canvas 画布" style="border:1px solid #000000;">6666</canvas>
+    <script>
+ var c=document.getElementById("myCanvas");
+ var ctx=c.getContext("2d");
+ ctx.fillStyle="#FF0000";
+ ctx.fillRect(0,0,150,75);
+ </script> 
 </body>
 </html>

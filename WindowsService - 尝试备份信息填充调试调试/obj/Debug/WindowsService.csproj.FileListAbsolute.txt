@@ -1,0 +1,8 @@
+D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\bin\Debug\Service\WindowsService.exe
+D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\bin\Debug\Service\WindowsService.pdb
+D:\MyProgram\GitHub\OverlayAnalysisTest\WindowsService\obj\Debug\WindowsService.FHService.resources
+D:\MyProgram\GitHub\OverlayAnalysisTest\WindowsService\obj\Debug\WindowsService.ProjectInstaller.resources
+D:\MyProgram\GitHub\OverlayAnalysisTest\WindowsService\obj\Debug\WindowsService.csproj.GenerateResource.Cache
+D:\MyProgram\GitHub\OverlayAnalysisTest\WindowsService\obj\Debug\WindowsService.exe
+D:\MyProgram\GitHub\OverlayAnalysisTest\WindowsService\obj\Debug\WindowsService.pdb
+D:\MyProgram\GitHub\OverlayAnalysisTest\OverlayAnalysisTest\bin\Debug\Service\WindowsService.exe.config
