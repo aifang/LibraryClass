@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForAllProject", "OverlayAnalysisTest\TestForAllProject.csproj", "{AEED764C-44A0-4B8C-996F-A97B9B88B986}"
 EndProject
@@ -33,6 +33,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureClassCopy", "FeatureClassCopy\FeatureClassCopy.csproj", "{FBDC79B8-5A34-4DBA-9ADB-BC500D9245BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsService", "WindowsService\WindowsService.csproj", "{6A6B882B-065B-4EC7-8DC9-CD64BD25A663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winFormThread", "winFormThread\winFormThread.csproj", "{C947F2CE-82D8-43E7-B52B-EC8329F57049}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -134,16 +136,26 @@ Global
 		{6A6B882B-065B-4EC7-8DC9-CD64BD25A663}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{6A6B882B-065B-4EC7-8DC9-CD64BD25A663}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{6A6B882B-065B-4EC7-8DC9-CD64BD25A663}.Release|x86.ActiveCfg = Release|Any CPU
+		{C947F2CE-82D8-43E7-B52B-EC8329F57049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C947F2CE-82D8-43E7-B52B-EC8329F57049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C947F2CE-82D8-43E7-B52B-EC8329F57049}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C947F2CE-82D8-43E7-B52B-EC8329F57049}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C947F2CE-82D8-43E7-B52B-EC8329F57049}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C947F2CE-82D8-43E7-B52B-EC8329F57049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C947F2CE-82D8-43E7-B52B-EC8329F57049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C947F2CE-82D8-43E7-B52B-EC8329F57049}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C947F2CE-82D8-43E7-B52B-EC8329F57049}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C947F2CE-82D8-43E7-B52B-EC8329F57049}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C5ABEFF3-D87D-43E8-9A8C-A5452F88B89D} = {85C4BC50-FFB4-4314-9547-A994C21692D8}
 		{A776A253-F4C9-4A1A-B714-5BB97FB2F061} = {85C4BC50-FFB4-4314-9547-A994C21692D8}
-		{FBDC79B8-5A34-4DBA-9ADB-BC500D9245BE} = {85C4BC50-FFB4-4314-9547-A994C21692D8}
+		{C5ABEFF3-D87D-43E8-9A8C-A5452F88B89D} = {85C4BC50-FFB4-4314-9547-A994C21692D8}
 		{28BC3154-8457-4F2E-8B1F-379EDFEC5CF3} = {AEE3620A-3CFC-4421-9BFD-5072026E459F}
 		{0B5AC4E5-F6BB-4136-80F5-399DE31CB9CB} = {93204B06-655B-4812-9FB7-817DE7B8CC5A}
+		{FBDC79B8-5A34-4DBA-9ADB-BC500D9245BE} = {85C4BC50-FFB4-4314-9547-A994C21692D8}
 		{6A6B882B-065B-4EC7-8DC9-CD64BD25A663} = {93204B06-655B-4812-9FB7-817DE7B8CC5A}
 	EndGlobalSection
 EndGlobal
