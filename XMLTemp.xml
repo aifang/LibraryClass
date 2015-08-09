@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<BusinessMetadata>
+  <Tables>
+    <Table name="SDB_BUSINESS" aliasname="SDB_BUSINESS">
+      <Field name="ID" aliasname="ID" type="VARCHAR2" size="7" precision="" scale="" primarykey="False" nullable="False" default="" comment="业务数据GUID唯一标识码" />
+      <Field name="DATABASEID" aliasname="DATABASEID" type="VARCHAR2" size="7" precision="" scale="" primarykey="False" nullable="False" default="" comment="业务数据库GUID唯一标识码" />
+      <Field name="CATEGORYID" aliasname="CATEGORYID" type="VARCHAR2" size="7" precision="" scale="" primarykey="False" nullable="False" default="" comment="业务类别编号" />
+      <Field name="NAME" aliasname="NAME" type="VARCHAR2" size="7" precision="" scale="" primarykey="False" nullable="False" default="" comment="业务名称" />
+      <Field name="NOTE" aliasname="NOTE" type="VARCHAR2" size="1" precision="" scale="" primarykey="False" nullable="True" default="" comment="元数据" />
+      <Field name="METADATA" aliasname="METADATA" type="LONG" size="" precision="" scale="" primarykey="False" nullable="False" default="" comment="备注" />
+    </Table>
+  </Tables>
+</BusinessMetadata>
